@@ -1,4 +1,4 @@
-package com.webtest.hml.personal;
+package com.edu.hml.personal;
 
 import org.testng.annotations.Test;
 
