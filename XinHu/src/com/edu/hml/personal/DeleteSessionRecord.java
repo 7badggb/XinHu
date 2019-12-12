@@ -1,19 +1,11 @@
-package com.webtest.Personal;
+package com.edu.hml.personal;
 
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class DeleteSessionRecord extends BaseTest{
-	@Test//(dataProvider="excel",dataProviderClass=NSDataProvider.class)
-	public void login(String name,String pwd) {
-		System.out.println(name+pwd);
-		webtest.open("http://localhost:9090/?m=login");
-		webtest.type("name=admin", name);
-		webtest.type("xpath=//input[@type='password']", pwd);
-		webtest.click("class=webbtn");
-	}
-	
+
 	@Test(description="删除我的会话记录")
 	//删除我的会话记录
 	public void test1(){

@@ -1,18 +1,10 @@
-package com.webtest.Personal;
+package com.edu.hml.personal;
 
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class EnterPersonalDocmentEdit extends BaseTest{
-	@Test//(dataProvider="excel",dataProviderClass=NSDataProvider.class)
-	public void login(String name,String pwd) {
-		System.out.println(name+pwd);
-		webtest.open("http://localhost:9090/?m=login");
-		webtest.type("name=admin", name);
-		webtest.type("xpath=//input[@type='password']", pwd);
-		webtest.click("class=webbtn");
-	}
 	
 	@Test(description="进入个人资料编辑页面")
 	public void test4(){

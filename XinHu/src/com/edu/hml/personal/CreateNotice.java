@@ -1,18 +1,10 @@
-package com.webtest.Personal;
+package com.edu.hml.personal;
 
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class CreateNotice extends BaseTest{
-	@Test//(dataProvider="excel",dataProviderClass=NSDataProvider.class)
-	public void login(String name,String pwd) {
-		System.out.println(name+pwd);
-		webtest.open("http://localhost:9090/?m=login");
-		webtest.type("name=admin", name);
-		webtest.type("xpath=//input[@type='password']", pwd);
-		webtest.click("class=webbtn");
-	}
 	
 	@Test(description="新增通知公告")
 	public void test3(){
