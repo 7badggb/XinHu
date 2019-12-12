@@ -1,28 +1,34 @@
-package com.edu.hml.personal;
+package com.webtest.hml.personal;
 
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class CreateNotice extends BaseTest{
+	public void initDemo(){
+		//个人办公
+		webtest.click("xpath=//span[@pmenuid='38']");
+	}
 	
 	@Test(description="新增通知公告")
 	public void test3(){
-		webtest.click("xpath=//span[@class='spanactive']");
+		initDemo();
 		//点击通知公告
-		webtest.click("xpath=//td[text()='通知公告']");
-		//点击新增
-		webtest.click("id=addbtn_1576053590979_4784");
+		webtest.click("id=menu_list_gong");
+		//点击新增
+		webtest.click("xpath=//button[@click='clickwin,0']");
 		//点击进入iframe
 		webtest.enterFrame("openinputiframe");
-		//输入标题
-		webtest.type("xpath=//textarea[@class='ys2']", "通知公告");
+		//输入标题
+		webtest.type("xpath=//input[@name='title']", "通知公告");
 		//点击保存
-		webtest.click("xpath=//td[text()='保存']");
+		webtest.click("xpath=//input[@onclick='return c.save()']");
+		//webtest.click("xpath=//input[@value='保存(s)']")
 		//选择类型名
-		webtest.click("xpath=/html/body/div/div[2]/div/iframe/html/body/div/div[2]/div[2]/form/table/tbody/tr[3]/td[2]/span/select/option[2]");
+		//webtest.click("xpath=//option[@value='通知公告']");
+		webtest.selectByValue("xpath=//*[@id=\"div_typename\"]/select","通知公告");
 		//点击保存
-		webtest.click("xpath=//td[text()='保存']");
+		webtest.click("xpath=//input[@onclick='return c.save()']");
 		//离开iframe
 		webtest.leaveFrame();
 	}

@@ -1,26 +1,37 @@
-package com.edu.hml.personal;
+package com.webtest.hml.personal;
 
 import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 
 public class CreateSchedule extends BaseTest{
-	
+	public void initDemo(){
+		//个人办公
+		webtest.click("xpath=//span[@pmenuid='38']");
+	}
 	@Test(description="新增日程")
 	//新增日程
-	public void test2(){
-		webtest.click("xpath=//span[@class='spanactive']");
-		//点击单据提醒
-		webtest.click("xpath=//td[text()='单据提醒']");
-		//点击单据提醒设置
-		webtest.click("xpath=//td[text()='单据提醒设置']");
-		//选中一条单据提醒设置记录，点击右侧的操作
-		webtest.click("xpath=//a[@oj='9']");
-		//选择评论
-		webtest.click("xpath=//td[text()='评论']");
-		//输入评论
-		webtest.type("xpath=//textarea[@class='input']", "输入评论的内容");
+	public void test(){
+		initDemo();
+		//点击日程
+		webtest.click("id=menu_list_schedule");
+		//点击新增
+		webtest.click("xpath=//button[@click='clickwin,0']");
+		//输入标题
+		webtest.type("xpath=//input[@name='title']","日程500");
+		//提醒时间
+		webtest.click("xpath=//input[@readonly name='startdt']");
+		//本月1号
+		webtest.click("xpath=//td[@xu='1']");
 		//点击确定
-		webtest.click("xpath=//td[text()='确定']");
+		webtest.click("xpath=//div[@class='rockdatepicker']/div[4]/a[3]");
+		//截止时间
+		webtest.click("xpath=//input[@readonly name='enddt']");
+		//本月30号
+		webtest.click("xpath=//td[@xu='30']");
+		//点击确定
+		webtest.click("xpath=//div[@class='rockdatepicker']/div[4]/a[3]");
+		//点击保存
+		webtest.click("id=AltS");
 	}
 }
