@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.edu.core.ApiListener;
 import com.edu.core.BaseTest;
-@Listeners(ApiListener.class)
+
 public class AddPayment extends BaseTest{
 	public void InitDemo() {
 		//进入客户模块

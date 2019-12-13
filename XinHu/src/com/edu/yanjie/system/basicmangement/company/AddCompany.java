@@ -10,7 +10,7 @@ import com.edu.core.ApiListener;
 import com.edu.core.BaseTest;
 import com.edu.dataprovider.NSDataProvider;
 import com.webtest.dataprovider.ExcelDataProvider;
-@Listeners(ApiListener.class)
+
 public class AddCompany extends BaseTest {
 	
 	public void InitDemo() {

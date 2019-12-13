@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import com.edu.core.ApiListener;
 import com.edu.core.BaseTest;
 
-@Listeners(ApiListener.class)
 public class SloginTest extends BaseTest {
 	@Test	
 	public void loginSuccess() {
