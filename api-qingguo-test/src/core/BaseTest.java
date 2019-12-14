@@ -3,7 +3,7 @@ package core;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.edu.utils.DbHelper;
+import utils.DbHelper;
 
 public class BaseTest {
 	public DbHelper db ;

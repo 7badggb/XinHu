@@ -6,7 +6,7 @@ import org.apache.http.client.CookieStore;
 import org.apache.http.cookie.Cookie;
 import org.testng.annotations.Test;
 
-import com.edu.utils.Common;
+import utils.Common;
 
 import core.HttpDriver;
 import net.sf.json.JSONObject;
