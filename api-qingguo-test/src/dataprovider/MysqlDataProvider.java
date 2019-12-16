@@ -1,13 +1,13 @@
 package dataprovider;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.IOException;
+import java.sql.*;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class MysqlDataProvider {
 	
@@ -22,12 +22,12 @@ public class MysqlDataProvider {
 			Connection conn = DriverManager
 					.getConnection(url, "root", "123456");
 			if (!conn.isClosed()) {
-				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½É¹ï¿½");
+				System.out.println("Á¬½ÓÊý¾Ý¿â³É¹¦");
 			}
-			// Statementï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐºÜ¶à·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½executeUpdateï¿½ï¿½ï¿½ï¿½Êµï¿½Ö²ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½Âºï¿½É¾ï¿½ï¿½ï¿½ï¿½
+			// StatementÀïÃæ´øÓÐºÜ¶à·½·¨£¬±ÈÈçexecuteUpdate¿ÉÒÔÊµÏÖ²åÈë£¬¸üÐÂºÍÉ¾³ýµÈ
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
-			//ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ý¼ï¿½ï¿½Ä½á¹¹
+			//µÃµ½Êý¾Ý¼¯µÄ½á¹¹
 			ResultSetMetaData rsMetaData = rs.getMetaData();
 			int cols = rsMetaData.getColumnCount();
 			System.out.println(cols);
@@ -36,7 +36,7 @@ public class MysqlDataProvider {
 
 				int col=0;
 				for (int i = 0; i < cols; i++) {
-					fields[col] = rs.getString(i+1);//ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					fields[col] = rs.getString(i+1);//¶ÁÈ¡µ±Ç°ÐÐÖ¸¶¨µÄÁÐ
 					col++;
 				}
 				records.add(fields);
