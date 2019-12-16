@@ -26,6 +26,34 @@
 	<classpathentry kind="lib" path="libs/poi-ooxml-4.1.0.jar"/>
 	<classpathentry kind="lib" path="libs/poi-ooxml-schemas-4.1.0.jar"/>
 	<classpathentry kind="lib" path="libs/freemarker.jar"/>
+	<classpathentry kind="lib" path="libs/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/ezmorph-1.0.3.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/fluent-hc-4.5.9.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/freemarker.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/httpclient-4.5.9.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/httpclient-cache-4.5.9.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/httpclient-osgi-4.5.9.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/httpclient-win-4.5.9.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/httpcore-4.4.11.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/httpmime-4.5.9.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/javax.mail-1.6.2.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/jna-4.5.2.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/jna-platform-4.5.2.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/log4j-api-2.11.2.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/log4j-core-2.11.2.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/poi-4.1.0.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/poi-ooxml-4.1.0.jar"/>
+	<classpathentry kind="lib" path="E:/人民当家做组/XinHu/api-qingguo-test/libs/poi-ooxml-schemas-4.1.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="libs/commons-collections4-4.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons-compress-1.18.jar"/>
+	<classpathentry kind="lib" path="libs/xmlbeans-3.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
