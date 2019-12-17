@@ -12,7 +12,7 @@ import core.HttpDriver;
 import net.sf.json.JSONObject;
 import utils.Checker;
 
-public class GetTransportfeeTest {
+public class GetTransportfee {
 	String gettransportfee_url="/common/getTransportFee";
 	@Test(description="获取正确地址运费")
 	public void testGetTransportfee() throws IOException, Exception {
