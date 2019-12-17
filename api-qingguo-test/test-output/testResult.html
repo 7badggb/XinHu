@@ -4,9 +4,9 @@
 </head>
 <body>
   <h1>测试报告</h1>
-  <p>生成测试报告的时间：2019-12-17  09:12:05</p>
-  <p>共运行了3条测试用例</p>
-  <p>失败了1条测试用例,成功了2条测试用例</p>
+  <p>生成测试报告的时间：2019-12-17  04:27:06</p>
+  <p>共运行了17条测试用例</p>
+  <p>失败了1条测试用例,成功了16条测试用例</p>
 
 <p>执行失败的测试用例</p>
 <table border='1'>
@@ -20,7 +20,7 @@
     <tr bgcolor='red'>
         <td>1</td>
         <td>testLogin1</td>
-        <td>LoginTest.testLogin1()[pri:0, instance:test.LoginTest@224edc67]</td>
+        <td>LoginTest.testLogin1()[pri:0, instance:test.LoginTest@28d25987]</td>
         <td>登录成功</td>
         <td>FAIL</td>
     </tr>
@@ -38,15 +38,113 @@
     <tr bgcolor='green'>
         <td>1</td>
         <td>testLogin2</td>
-        <td>LoginTest.testLogin2()[pri:0, instance:test.LoginTest@224edc67]</td>
+        <td>LoginTest.testLogin2()[pri:0, instance:test.LoginTest@28d25987]</td>
         <td>用户名为空</td>
         <td>PASS</td>
     </tr>
     <tr bgcolor='green'>
         <td>2</td>
         <td>testLogin3</td>
-        <td>LoginTest.testLogin3()[pri:0, instance:test.LoginTest@224edc67]</td>
+        <td>LoginTest.testLogin3()[pri:0, instance:test.LoginTest@28d25987]</td>
         <td>用户名或密码错误</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>3</td>
+        <td>testSkuList</td>
+        <td>SkuListTestYanJie.testSkuList()[pri:0, instance:test.SkuListTestYanJie@4501b7af]</td>
+        <td>获取skulist</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>4</td>
+        <td>testSkuListByid1</td>
+        <td>SkuListTestYanJie.testSkuListByid1()[pri:0, instance:test.SkuListTestYanJie@4501b7af]</td>
+        <td>获取skulist带正确的参数id</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>5</td>
+        <td>testSkuListByid2</td>
+        <td>SkuListTestYanJie.testSkuListByid2()[pri:0, instance:test.SkuListTestYanJie@4501b7af]</td>
+        <td>获取skulist带错误的参数id</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>6</td>
+        <td>getListFail</td>
+        <td>ListTestLJQ.getListFail()[pri:0, instance:test.ListTestLJQ@523884b2]</td>
+        <td>不登录获取list</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>7</td>
+        <td>getListSuccess</td>
+        <td>ListTestLJQ.getListSuccess()[pri:0, instance:test.ListTestLJQ@523884b2]</td>
+        <td>登录获取list</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>8</td>
+        <td>testGetTransportfee</td>
+        <td>GetTransportfee.testGetTransportfee()[pri:0, instance:test.GetTransportfee@5b275dab]</td>
+        <td>获取正确地址运费</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>9</td>
+        <td>testGetTransportfee1</td>
+        <td>GetTransportfee.testGetTransportfee1()[pri:0, instance:test.GetTransportfee@5b275dab]</td>
+        <td>错误id</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>10</td>
+        <td>newaddress1</td>
+        <td>NewAddress.newaddress1()[pri:0, instance:test.NewAddress@61832929]</td>
+        <td></td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>11</td>
+        <td>newaddress2</td>
+        <td>NewAddress.newaddress2()[pri:0, instance:test.NewAddress@61832929]</td>
+        <td>用户名不正确</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>12</td>
+        <td>newaddress3</td>
+        <td>NewAddress.newaddress3()[pri:0, instance:test.NewAddress@61832929]</td>
+        <td>地址不正确</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>13</td>
+        <td>testDeleteAdd1</td>
+        <td>AddressDeleteTest.testDeleteAdd1()[pri:0, instance:test.AddressDeleteTest@29774679]</td>
+        <td>删除收获地址</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>14</td>
+        <td>testDeleteAdd2</td>
+        <td>AddressDeleteTest.testDeleteAdd2()[pri:0, instance:test.AddressDeleteTest@29774679]</td>
+        <td>删除的收货地址 id 不存在 </td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>15</td>
+        <td>testSubmit1</td>
+        <td>SubmitTest.testSubmit1()[pri:0, instance:test.SubmitTest@3ffc5af1]</td>
+        <td>submit</td>
+        <td>PASS</td>
+    </tr>
+    <tr bgcolor='green'>
+        <td>16</td>
+        <td>testSubmit2</td>
+        <td>SubmitTest.testSubmit2()[pri:0, instance:test.SubmitTest@3ffc5af1]</td>
+        <td>请求参数为空(收件人姓名为空)</td>
         <td>PASS</td>
     </tr>
 </table>

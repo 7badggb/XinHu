@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import com.webtest.core.ApiListener;
 import com.webtest.core.BaseTest;
 import com.webtest.dataprovider.ExcelDataProvider;
-@Listeners(ApiListener.class)
+
 public class ReimSearch extends BaseTest{
 	@DataProvider(name="data3")
 	public static Object[][] data() throws IOException {
