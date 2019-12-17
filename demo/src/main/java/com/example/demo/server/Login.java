@@ -1,4 +1,4 @@
-package com.example.demo.server;
+﻿package com.example.demo.server;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -24,7 +24,7 @@ public class Login {
 		if(phoneNumber==null) {
 			result.element("message","用户名为空");
 			result.element("code", 401);	
-		}else if(phoneArea.equals("86")&&phoneNumber.equals("200000000000")&&password.equals("netease123")) {
+		}else if(phoneArea.equals("86")&&phoneNumber.equals("20000000000")&&password.equals("netease123")) {
 			cookie=new Cookie("login","true");
 //			cookie.setPath("/");
 //			response.addCookie(cookie);
