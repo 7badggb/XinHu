@@ -15,11 +15,12 @@ import utils.Checker;
 public class AddressDeleteTest {
 		String deleteAdd_url="/fgadmin/address/delete";
 		@Test(description="删除收获地址")
-		public void testDeleteAdd1() {
+		public void testDeleteAdd1() throws IOException, Exception {
+			org.apache.http.client.CookieStore cookieStore = Common.getCookie("20000000000", "netease123");
 			JSONObject user=new JSONObject();
 			user.element("id", 77243286);
 			
-			String  result=HttpDriver.doPost(deleteAdd_url, user);
+			String  result=HttpDriver.doPost(deleteAdd_url, user,cookieStore);
 			Checker check=new Checker(result);
 			try {
 				check.assertXpath("message", "success");
@@ -30,10 +31,11 @@ public class AddressDeleteTest {
 	}
 	@Test(description="删除的收货地址 id 不存在 ")
 	public void testDeleteAdd2() throws IOException, Exception {
+		org.apache.http.client.CookieStore cookieStore = Common.getCookie("20000000000", "netease123");
 		JSONObject user=new JSONObject();
 		user.element("id", 111111);
 		
-		String  result=HttpDriver.doPost(deleteAdd_url, user);
+		String  result=HttpDriver.doPost(deleteAdd_url, user,cookieStore);
 		Checker check=new Checker(result);
 		try {
 			check.assertXpath("message", "请求失败");

@@ -1,12 +1,22 @@
 package com.example.demo.server;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Objects;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import net.sf.json.JSONObject;
+
 @RestController
 public class NewAddress {
-
-	public static Cookie cookie;
-	@ResponseBody
 	@RequestMapping(value="/fgadmin/address/new",method=RequestMethod.POST,produces="application/json;charset=UTF-8")
-	public JSONObject getByJSON(HttpServletResponse response,@RequestBody JSONObject body) {
+	public JSONObject getByJSON(HttpServletRequest request,@RequestBody JSONObject body) {
+		
+		JSONObject result=new JSONObject();
+		
 		String receiverName=body.getString("receiverName");
 		Object cellPhone=body.get("cellPhone");
 		String addressDetail=body.getString("addressDetail");
@@ -14,17 +24,25 @@ public class NewAddress {
 		String city=body.getString("city");
 		String area=body.getString("area");
 		
-		JSONObject result=new JSONObject();
-		if(receiverName==null) {
-			result.element("message","receiverName²ÎÊıÀàĞÍ²»ÕıÈ·");
+		Cookie[]cookies =request.getCookies();
+		if(Objects.isNull(cookies)) {
+			result.element("message","è¯·å…ˆç™»å½•");
+			result.element("code",400);
+			return result;
+		}
+		for(Cookie cookie:cookies) {
+		if(cookie.getName().equals("login")&&cookie.getValue().equals("true")&&receiverName==null) {
+			result.element("message","receiverNameå‚æ•°ç±»å‹ä¸æ­£ç¡®");
 			result.element("code", 400);	
-		}else if(receiverName.equals("ÕÅÈı")&&cellPhone.equals("12615813537")&&addressDetail.equals("1¶°3µ¥Ôª")
-				&&province.equals("Õã½­Ê¡")&&city.equals("º¼ÖİÊĞ")&&area.equals("±õ½­Çø")) {
+		}else if(cookie.getName().equals("login")&&cookie.getValue().equals("true")&&receiverName.equals("å¼ ä¸‰")&&cellPhone.equals("12615813537")&&addressDetail.equals("1æ ‹3å•å…ƒ")
+				&&province.equals("æµ™æ±Ÿçœ")&&city.equals("æ­å·å¸‚")&&area.equals("æ»¨æ±ŸåŒº")) {
 			result.element("message","success");
 			result.element("code", 200);
 		} else {
-			result.element("message","ÇëÇó²ÎÊı²»ÕıÈ·");
+			result.element("message","è¯·æ±‚å¤±è´¥");
 			result.element("code",400);
+		}
+		return result;
 		}
 		return result;
 	}

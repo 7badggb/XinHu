@@ -1,17 +1,18 @@
 package test;
 
 import java.io.IOException;
-
 import org.testng.annotations.Test;
 
 import core.HttpDriver;
 import net.sf.json.JSONObject;
 import utils.Checker;
+import utils.Common;
 
 public class SubmitTest {
 	String submit_url="/fgadmin/orders/submit";
 	@Test(description="submit")
 	public void testSubmit1() throws IOException, Exception {
+		org.apache.http.client.CookieStore cookieStore = Common.getCookie("20000000000", "netease123");
 		JSONObject submitbody = new JSONObject();
 		submitbody.element("skuIds","2");
 		submitbody.element("skuNumbers","1");
@@ -30,7 +31,7 @@ public class SubmitTest {
 		submitbody.element("accessSource","noSource");
 		submitbody.element("accessDevice","0");
 		
-		String result=HttpDriver.doPost(submit_url,submitbody);
+		String result=HttpDriver.doPost(submit_url,submitbody,cookieStore);
 		Checker check = new Checker(result);
 		try {
 			check.assertXpath("message", "success");
@@ -39,12 +40,14 @@ public class SubmitTest {
 			e.printStackTrace();
 		}
 	}
-	@Test(description="请求参数为空或不存在(收件人姓名为空)")
+	@Test(description="请求参数为空(收件人姓名为空)")
 	public void testSubmit2() throws IOException,Exception{
+		org.apache.http.client.CookieStore cookieStore = Common.getCookie("20000000000", "netease123");
 		JSONObject submitbody = new JSONObject();
 		submitbody.element("skuIds","2");
 		submitbody.element("skuNumbers","1");
 		submitbody.element("stockIds","Netease123");
+		submitbody.element("receiverName","");
 		submitbody.element("cellPhone","20000000000");
 		submitbody.element("addressDetail","网商路599号");
 		submitbody.element("province","浙江省");
@@ -57,7 +60,7 @@ public class SubmitTest {
 		submitbody.element("logisticsCompanyId","1");
 		submitbody.element("accessSource","noSource");
 		submitbody.element("accessDevice","0");
-		String result=HttpDriver.doPost(submit_url,submitbody);
+		String result=HttpDriver.doPost(submit_url,submitbody,cookieStore);
 		Checker check = new Checker(result);
 		try {
 			check.assertXpath("message", "请求失败");
