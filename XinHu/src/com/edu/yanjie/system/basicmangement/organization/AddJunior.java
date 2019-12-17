@@ -4,7 +4,13 @@ package com.edu.yanjie.system.basicmangement.organization;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import org.openqa.selenium.remote.server.handler.RefreshPage;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.edu.core.BaseTest;
@@ -19,6 +25,10 @@ public class AddJunior extends BaseTest {
 		webtest.click("id=menu_down_isons_num220");
 		//点击组织结构
 		webtest.click("id=menu_list_num6");		
+	}
+	@BeforeTest
+	public void doBeforeTest() {	
+		deleteRecord("xinhu_dept", "呵呵哒");	
 	}
 	@Test(description="直接点击新增下级")
 	public void addJunior1() {	

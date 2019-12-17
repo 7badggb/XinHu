@@ -2,6 +2,7 @@ package com.edu.yanjie.system.basicmangement.userMangement;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.edu.core.BaseTest;
@@ -15,6 +16,10 @@ public class ImportUser extends BaseTest  {
 		webtest.click("id=menu_down_isons_num220");				
 		//点击用户管理
 		webtest.click("id=menu_list_user");
+	}
+	@BeforeTest
+	public void doBeforeTest() {	
+		deleteRecord("xinhu_admin", "zxp2");	
 	}
 	@Test(description="成功导入用户")
 	public void importUser1() throws InterruptedException {

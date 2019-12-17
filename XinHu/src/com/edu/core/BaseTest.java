@@ -5,6 +5,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -13,13 +17,12 @@ import java.util.Properties;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Navigation;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+
 
 import com.webtest.utils.Log;
 import com.webtest.utils.ReadProperties;
@@ -35,9 +38,6 @@ public class BaseTest {
 	public  WebDriverEngine webtest;
 	private WebDriver driver;
 	public String driverType;
-
-	
-	
 
 	private WebDriver newWebDriver(String driverType) throws IOException {
 		WebDriver driver = null;
@@ -58,11 +58,8 @@ public class BaseTest {
 		}else{
 			return null;
 		}
-
 		
-		return driver;
-
-	
+		return driver;	
 	}
 
 
@@ -71,11 +68,8 @@ public class BaseTest {
 	 *³õÊ¼»¯ä¯ÀÀÆ÷
 	 * 
 	 */
-
-
 	@BeforeClass
 	public void doBeforeClass() throws Exception {
-
 		driverType=ReadProperties.getPropertyValue("driverType");
 		driver = this.newWebDriver(driverType);
 		driver.manage().window().maximize();
@@ -92,13 +86,33 @@ public class BaseTest {
 		driver.navigate().refresh();
 		Thread.sleep(3000);
 	}
-
-
-	@AfterClass
-	public void doAfterClass() throws Exception{
-		Thread.sleep(3000);
-		driver.quit();
-	}	
+//	@AfterSuite
+//	public void doAfterMethod() {
+//		if(this.driver != null){
+//			this.driver.quit();
+//			}
+//		Log.info("Quitted Browser");
+//	}
+	public void deleteRecord(String table,String name) {
+		Connection con = null;		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/rockxinhu?useUnicode=true&characterEncoding=utf-8", "root", "root");
+			Statement sm = con.createStatement();
+			String sql="delete from "+table+" where name='"+name+"'";
+			sm.executeUpdate(sql);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
 
 	

@@ -3,6 +3,7 @@ package com.edu.yanjie.system.IM.conversationManagement;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.edu.core.BaseTest;
@@ -15,6 +16,11 @@ public class AddConversation extends BaseTest {
 		webtest.click("id=menu_list_num14");				
 		//点击会话管理
 		webtest.click("id=menu_list_num16");
+	}
+	@BeforeTest
+	public void doBeforeTest() {	
+		deleteRecord("xinhu_im_group", "1");
+		deleteRecord("xinhu_im_group", "管理层");
 	}
 	@Test(description="添加一个会话名为1的会话")
 	public void addConversation1() throws InterruptedException {
