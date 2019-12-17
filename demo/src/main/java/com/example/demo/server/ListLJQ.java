@@ -13,12 +13,6 @@ import net.sf.json.JSONObject;
 
 @RestController
 public class ListLJQ {
-	@RequestMapping(value="/getCookie",method=RequestMethod.GET)
-	public String testCookie(HttpServletResponse response) {
-		Cookie cookie = new Cookie("login","true");
-		response.addCookie(cookie);
-		return "获得cookie成功";
-	}
 	@RequestMapping(value="/fgadmin/address/list",method=RequestMethod.GET)
 	public JSONObject getwithCookies(HttpServletRequest request) {
 		Cookie[]cookies =request.getCookies();
