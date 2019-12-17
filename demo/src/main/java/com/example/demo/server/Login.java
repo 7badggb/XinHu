@@ -26,8 +26,8 @@ public class Login {
 			result.element("code", 401);	
 		}else if(phoneArea.equals("86")&&phoneNumber.equals("20000000000")&&password.equals("netease123")) {
 			cookie=new Cookie("login","true");
-//			cookie.setPath("/");
-//			response.addCookie(cookie);
+			cookie.setPath("/");
+			response.addCookie(cookie);
 			result.element("message","success");
 			result.element("code", 200);
 		} else {
