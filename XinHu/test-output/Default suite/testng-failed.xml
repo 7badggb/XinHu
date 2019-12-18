@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.edu.lijiaqi.reim.ReimSearch">
+      <class name="com.edu.yanjie.system.basicmangement.company.AddCompany">
         <methods>
-          <include name="searchDemo1" invocation-numbers="2 3"/>
-          <include name="doAfterClass"/>
+          <include name="AddCompany7"/>
+          <include name="AddCompany4"/>
           <include name="doBeforeClass"/>
+          <include name="doBeforeTest"/>
         </methods>
-      </class> <!-- com.edu.lijiaqi.reim.ReimSearch -->
+      </class> <!-- com.edu.yanjie.system.basicmangement.company.AddCompany -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [TestNGSuite]">
+  <listeners>
+    <listener class-name="com.edu.core.ApiListener"/>
+  </listeners>
+  <test thread-count="5" name="test2(failed)">
     <classes>
+      <class name="com.edu.lijiaqi.reim.ReimSet">
+        <methods>
+          <include name="doAfterClass"/>
+          <include name="setDemo2" invocation-numbers="1"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ReimSet -->
+      <class name="com.edu.lijiaqi.reim.ReimChat">
+        <methods>
+          <include name="chatDemo1" invocation-numbers="1 2"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ReimChat -->
       <class name="com.edu.lijiaqi.reim.ReimSearch">
         <methods>
           <include name="searchDemo1" invocation-numbers="2 3"/>
@@ -10,6 +27,21 @@
           <include name="doBeforeClass"/>
         </methods>
       </class> <!-- com.edu.lijiaqi.reim.ReimSearch -->
+      <class name="com.edu.lijiaqi.reim.ProcessList">
+        <methods>
+          <include name="listDelete"/>
+          <include name="listChange"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ProcessList -->
+      <class name="com.edu.lijiaqi.reim.ProcessTerm">
+        <methods>
+          <include name="termDelete"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ProcessTerm -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- test2(failed) -->
+</suite> <!-- Failed suite [TestNGSuite] -->

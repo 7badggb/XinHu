@@ -14,6 +14,7 @@
 	<classpathentry kind="lib" path="libs/xmlbeans-3.0.1.jar"/>
 	<classpathentry kind="lib" path="libs/freemarker.jar"/>
 	<classpathentry kind="lib" path="libs/javax.mail-1.6.2.jar"/>
+	<classpathentry kind="lib" path="libs/mysql-connector-java-5.1.7-bin.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

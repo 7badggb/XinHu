@@ -20,6 +20,7 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 
@@ -86,13 +87,11 @@ public class BaseTest {
 		driver.navigate().refresh();
 		Thread.sleep(3000);
 	}
-//	@AfterSuite
-//	public void doAfterMethod() {
-//		if(this.driver != null){
-//			this.driver.quit();
-//			}
-//		Log.info("Quitted Browser");
-//	}
+	@AfterClass
+	public void doAfterClass() throws Exception{
+		Thread.sleep(3000);
+		driver.quit();
+	}
 	public void deleteRecord(String table,String name) {
 		Connection con = null;		
 		try {

@@ -6,217 +6,6 @@
   </listeners>
   <test thread-count="5" name="test2(failed)">
     <classes>
-      <class name="com.edu.hml.personal.SalaryEdit">
-        <methods>
-          <include name="test"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.hml.personal.SalaryEdit -->
-      <class name="com.edu.zmj.task.AddXsjh">
-        <methods>
-          <include name="AddXsjh3"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.zmj.task.AddXsjh -->
-      <class name="com.edu.yanjie.system.basicmangement.organization.AddJunior">
-        <methods>
-          <include name="addJunior2"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="addJunior3"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.basicmangement.organization.AddJunior -->
-      <class name="com.edu.lijiaqi.reim.ReimChat">
-        <methods>
-          <include name="chatDemo1" invocation-numbers="1 2"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.lijiaqi.reim.ReimChat -->
-      <class name="com.edu.zmj.task.SearchTask">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="SearchTask3"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.zmj.task.SearchTask -->
-      <class name="com.edu.yanjie.system.basicmangement.userMangement.ChangePhoto">
-        <methods>
-          <include name="changePhoto1"/>
-          <include name="changePhoto2"/>
-          <include name="changePhoto3"/>
-          <include name="doAfterClass"/>
-          <include name="changePhoto4"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.basicmangement.userMangement.ChangePhoto -->
-      <class name="com.edu.yanjie.system.basicmangement.company.SearchCompany">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="SearchCompany2"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.basicmangement.company.SearchCompany -->
-      <class name="com.edu.gaolu.system.VectionApply">
-        <methods>
-          <include name="AddApply2"/>
-          <include name="doAfterClass"/>
-          <include name="AddApply3"/>
-          <include name="doBeforeClass"/>
-          <include name="AddApply1"/>
-        </methods>
-      </class> <!-- com.edu.gaolu.system.VectionApply -->
-      <class name="com.edu.yanjie.system.subscriptionManagement.subscriptionTable.OperateSubscriptionTable">
-        <methods>
-          <include name="openSuscription"/>
-          <include name="SearchSuscription"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.subscriptionManagement.subscriptionTable.OperateSubscriptionTable -->
-      <class name="com.edu.wangna.test.Administration_2_1">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="test1"/>
-        </methods>
-      </class> <!-- com.edu.wangna.test.Administration_2_1 -->
-      <class name="com.edu.lijiaqi.reim.ReimSearch">
-        <methods>
-          <include name="searchDemo1" invocation-numbers="2 3"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.lijiaqi.reim.ReimSearch -->
-      <class name="com.edu.hml.personal.ExportAddressList">
-        <methods>
-          <include name="test"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.hml.personal.ExportAddressList -->
-      <class name="com.edu.hml.personal.EmailSettings">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="test"/>
-        </methods>
-      </class> <!-- com.edu.hml.personal.EmailSettings -->
-      <class name="com.edu.hml.personal.EnterPersonalDocmentEdit">
-        <methods>
-          <include name="test"/>
-          <include name="test2"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.hml.personal.EnterPersonalDocmentEdit -->
-      <class name="com.edu.yanjie.system.IM.conversationManagement.AddConversation">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="addConversation3"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.IM.conversationManagement.AddConversation -->
-      <class name="com.edu.yanjie.system.basicmangement.groupMangement.AddGroupUser">
-        <methods>
-          <include name="addGroupUser1"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="addGroupUser3"/>
-          <include name="addGroupUser2"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.basicmangement.groupMangement.AddGroupUser -->
-      <class name="com.edu.zmj.task.AddCustomer">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="AddCustomer5"/>
-        </methods>
-      </class> <!-- com.edu.zmj.task.AddCustomer -->
-      <class name="com.edu.yanjie.system.basicmangement.groupMangement.AddGroup">
-        <methods>
-          <include name="addGroup1"/>
-          <include name="addGroup2"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.basicmangement.groupMangement.AddGroup -->
-      <class name="com.edu.gaolu.system.RepaymentApply">
-        <methods>
-          <include name="AddApply3"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.gaolu.system.RepaymentApply -->
-      <class name="com.edu.yanjie.system.IM.conversationRecord.DeleteConversation">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="deleteConversation1"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.IM.conversationRecord.DeleteConversation -->
-      <class name="com.edu.yanjie.system.basicmangement.userMangement.ImportUser">
-        <methods>
-          <include name="importUser2"/>
-          <include name="importUser3"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="importUser4"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.basicmangement.userMangement.ImportUser -->
-      <class name="com.edu.zmj.task.SearchPayment">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="SearchPayment1"/>
-        </methods>
-      </class> <!-- com.edu.zmj.task.SearchPayment -->
-      <class name="com.edu.wangna.test.PersonnelAttendance_2_3">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="test1"/>
-        </methods>
-      </class> <!-- com.edu.wangna.test.PersonnelAttendance_2_3 -->
-      <class name="com.edu.wangna.test.Administration_2_2">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="test1"/>
-        </methods>
-      </class> <!-- com.edu.wangna.test.Administration_2_2 -->
-      <class name="com.edu.yanjie.system.subscriptionManagement.subscriptionManagement.RunSubscription">
-        <methods>
-          <include name="subscripitonOperate2"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.subscriptionManagement.subscriptionManagement.RunSubscription -->
-      <class name="com.edu.yanjie.system.basicmangement.company.AddCompany">
-        <methods>
-          <include name="AddCompany7"/>
-          <include name="AddCompany4"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="AddCompany6"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.basicmangement.company.AddCompany -->
-      <class name="com.edu.gaolu.system.VjobDailyApply">
-        <methods>
-          <include name="AddApply3"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.gaolu.system.VjobDailyApply -->
-      <class name="com.edu.gaolu.system.SalesOpporApply">
-        <methods>
-          <include name="AddApplyRepair4"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.gaolu.system.SalesOpporApply -->
       <class name="com.edu.lijiaqi.reim.ReimSet">
         <methods>
           <include name="doAfterClass"/>
@@ -224,60 +13,35 @@
           <include name="doBeforeClass"/>
         </methods>
       </class> <!-- com.edu.lijiaqi.reim.ReimSet -->
-      <class name="com.edu.hml.personal.DeleteSessionRecord">
+      <class name="com.edu.lijiaqi.reim.ReimChat">
         <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="test1"/>
-        </methods>
-      </class> <!-- com.edu.hml.personal.DeleteSessionRecord -->
-      <class name="com.edu.zmj.task.SearchContract">
-        <methods>
-          <include name="doAfterClass"/>
-          <include name="SearchContract1"/>
-          <include name="doBeforeClass"/>
-        </methods>
-      </class> <!-- com.edu.zmj.task.SearchContract -->
-      <class name="com.edu.zmj.task.SearchReceipt">
-        <methods>
-          <include name="SearchReceipt1"/>
+          <include name="chatDemo1" invocation-numbers="1 2"/>
           <include name="doAfterClass"/>
           <include name="doBeforeClass"/>
         </methods>
-      </class> <!-- com.edu.zmj.task.SearchReceipt -->
-      <class name="com.edu.yanjie.system.subscriptionManagement.subscriptionManagement.SubscriptionOperate">
+      </class> <!-- com.edu.lijiaqi.reim.ReimChat -->
+      <class name="com.edu.lijiaqi.reim.ReimSearch">
         <methods>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="subscripitonOperate2"/>
-          <include name="subscripitonOperate1"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.subscriptionManagement.subscriptionManagement.SubscriptionOperate -->
-      <class name="com.edu.yanjie.system.IM.conversationManagement.SendMessage">
-        <methods>
-          <include name="sendMessage3"/>
-          <include name="doAfterClass"/>
-          <include name="sendMessage1"/>
-          <include name="doBeforeClass"/>
-          <include name="sendMessage2"/>
-          <include name="sendMessage4"/>
-        </methods>
-      </class> <!-- com.edu.yanjie.system.IM.conversationManagement.SendMessage -->
-      <class name="com.edu.gaolu.system.SloginTest">
-        <methods>
-          <include name="loginSuccess"/>
-          <include name="doAfterClass"/>
-          <include name="doBeforeClass"/>
-          <include name="loginFail"/>
-        </methods>
-      </class> <!-- com.edu.gaolu.system.SloginTest -->
-      <class name="com.edu.wangna.test.PersonnelAttendance_2_5">
-        <methods>
-          <include name="test1"/>
+          <include name="searchDemo1" invocation-numbers="2 3"/>
           <include name="doAfterClass"/>
           <include name="doBeforeClass"/>
         </methods>
-      </class> <!-- com.edu.wangna.test.PersonnelAttendance_2_5 -->
+      </class> <!-- com.edu.lijiaqi.reim.ReimSearch -->
+      <class name="com.edu.lijiaqi.reim.ProcessList">
+        <methods>
+          <include name="listDelete"/>
+          <include name="listChange"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ProcessList -->
+      <class name="com.edu.lijiaqi.reim.ProcessTerm">
+        <methods>
+          <include name="termDelete"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ProcessTerm -->
     </classes>
   </test> <!-- test2(failed) -->
 </suite> <!-- Failed suite [TestNGSuite] -->
