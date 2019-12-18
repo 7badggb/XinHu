@@ -44,6 +44,9 @@ public class ImportUser extends BaseTest  {
 		webtest.type("xpath=//textarea[@class='form-control']", "cro");
 		webtest.click("xpath=//button[@click='saveadd']");
 		assertTrue(webtest.isTextPresent("成功导入1条数据"));
+//将导入用户的窗口叉掉，否则他会重复导入到一个窗口中去，其实第二个才是叉掉的导入用户，第一个叉掉的是用户管理，因为上面的识别方式不能执行
+		webtest.click("xpath=//span[@class='icon-remove']");
+		webtest.click("xpath=//span[@class='icon-remove']");
 
 	}
 	@Test(description="导入已存在的用户")
@@ -69,6 +72,9 @@ public class ImportUser extends BaseTest  {
 		webtest.type("xpath=//textarea[@class='form-control']", "cro");
 		webtest.click("xpath=//button[@click='saveadd']");
 		assertTrue(webtest.isTextPresent("没有可导入的数据,可能有存在重复数据"));
+//将导入用户的窗口叉掉，否则他会重复导入到一个窗口中去，其实第二个才是叉掉的导入用户，第一个叉掉的是用户管理，因为上面的识别方式不能执行
+		webtest.click("xpath=//span[@class='icon-remove']");
+		webtest.click("xpath=//span[@class='icon-remove']");
 
 	}
 	@Test(description="导入必填项为空的用户")
@@ -95,6 +101,9 @@ public class ImportUser extends BaseTest  {
 //		Thread.sleep(3000);
 		webtest.click("xpath=//button[@click='saveadd']");
 		assertTrue(webtest.isTextPresent("没有可导入的数据,注意*是必填的哦"));
+//将导入用户的窗口叉掉，否则他会重复导入到一个窗口中去，其实第二个才是叉掉的导入用户，第一个叉掉的是用户管理，因为上面的识别方式不能执行
+		webtest.click("xpath=//span[@class='icon-remove']");
+		webtest.click("xpath=//span[@class='icon-remove']");
 	}
 	@Test(description="导入空的用户")
 	public void importUser4() throws InterruptedException {

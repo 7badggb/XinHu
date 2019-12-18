@@ -30,6 +30,7 @@ public class AddCompany extends BaseTest {
 	public void doBeforeTest() {
 		deleteRecord("xinhu_company", "软件公司");
 		deleteRecord("xinhu_company", "&lt;script&gt;alert(&#39xss攻击攻击&#39)&lt;/script&gt;");
+                                deleteRecord("xinhu_company", "1234567890123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899");
 		deleteRecord("xinhu_company", "& @·？");		
 	}
 	@Test(description="添加名称软件公司的公司")
@@ -39,7 +40,7 @@ public class AddCompany extends BaseTest {
 		webtest.click("xpath=//button[@class='btn btn-primary']");
 		//点击进入iframe
 		webtest.enterFrame("openinputiframe");
-		//输入名称为呵呵哒
+		//输入名称为软件公司
 		webtest.type("name=name","软件公司");
 		//点击保存
 		webtest.click("id=AltS");
