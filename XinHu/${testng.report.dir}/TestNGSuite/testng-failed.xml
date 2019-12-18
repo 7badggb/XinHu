@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNGSuite]">
+  <listeners>
+    <listener class-name="com.edu.core.ApiListener"/>
+  </listeners>
+  <test thread-count="5" name="test2(failed)">
+    <classes>
+      <class name="com.edu.lijiaqi.reim.ProcessTerm">
+        <methods>
+          <include name="termDelete"/>
+          <include name="doAfterClass"/>
+          <include name="termAdd"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ProcessTerm -->
+      <class name="com.edu.lijiaqi.reim.ReimChat">
+        <methods>
+          <include name="chatDemo1" invocation-numbers="0 1 2"/>
+          <include name="chatDemo2"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ReimChat -->
+      <class name="com.edu.lijiaqi.reim.ProcessData">
+        <methods>
+          <include name="dataDelete"/>
+          <include name="dataAdd1"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+          <include name="dataAdd2"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ProcessData -->
+      <class name="com.edu.lijiaqi.reim.ReimSearch">
+        <methods>
+          <include name="searchDemo1" invocation-numbers="0 1 2 3"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ReimSearch -->
+      <class name="com.edu.lijiaqi.reim.ProcessList">
+        <methods>
+          <include name="listDelete"/>
+          <include name="doAfterClass"/>
+          <include name="listAdd" invocation-numbers="0 1"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ProcessList -->
+      <class name="com.edu.lijiaqi.reim.ReimSet">
+        <methods>
+          <include name="setDemo3"/>
+          <include name="setDemo1"/>
+          <include name="setDemo4"/>
+          <include name="doAfterClass"/>
+          <include name="setDemo2" invocation-numbers="0 1 2"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.ReimSet -->
+      <class name="com.edu.lijiaqi.reim.Process">
+        <methods>
+          <include name="processChange"/>
+          <include name="processDelete"/>
+          <include name="processAdd" invocation-numbers="0 1"/>
+          <include name="doAfterClass"/>
+          <include name="doBeforeClass"/>
+        </methods>
+      </class> <!-- com.edu.lijiaqi.reim.Process -->
+    </classes>
+  </test> <!-- test2(failed) -->
+</suite> <!-- Failed suite [TestNGSuite] -->
