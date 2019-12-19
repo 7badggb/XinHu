@@ -7,7 +7,7 @@ import core.HttpDriver;
 import net.sf.json.JSONObject;
 import utils.Checker;
 import utils.Common;
-
+//ÍõÄÈ
 public class NewAddress {
 
 	String newadd_url = "/fgadmin/address/new";

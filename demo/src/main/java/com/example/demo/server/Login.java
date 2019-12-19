@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.sf.json.JSONObject;
-
+//罗永素
 @RestController
 public class Login {
 	public static Cookie cookie;

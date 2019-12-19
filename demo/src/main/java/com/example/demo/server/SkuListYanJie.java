@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.sf.json.JSONObject;
-
+//阎洁
 @RestController
 public class SkuListYanJie {
 	@RequestMapping(value="/common/skulist",method=RequestMethod.GET)

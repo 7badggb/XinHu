@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import core.HttpDriver;
 import utils.Checker;
 import utils.Common;
-
+//李嘉琪
 public class ListTestLJQ {
 	String List_url="/fgadmin/address/list";
 	@Test(description="不登录获取list")

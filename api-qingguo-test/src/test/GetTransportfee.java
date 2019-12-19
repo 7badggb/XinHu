@@ -11,7 +11,7 @@ import utils.Common;
 import core.HttpDriver;
 import net.sf.json.JSONObject;
 import utils.Checker;
-
+//周铭俊
 public class GetTransportfee {
 	String gettransportfee_url="/common/getTransportFee";
 	@Test(description="获取正确地址运费")

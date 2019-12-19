@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.sf.json.JSONObject;
-
+//高璐
 @RestController
 public class DeleteAdd{
 	@RequestMapping(value="/fgadmin/address/delete",method=RequestMethod.POST,produces="application/json;charset=UTF-8")

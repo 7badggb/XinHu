@@ -11,7 +11,7 @@ import utils.Common;
 import core.HttpDriver;
 import net.sf.json.JSONObject;
 import utils.Checker;
-
+//高璐
 public class AddressDeleteTest {
 		String deleteAdd_url="/fgadmin/address/delete";
 		@Test(description="删除收获地址")

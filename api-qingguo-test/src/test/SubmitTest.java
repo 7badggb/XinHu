@@ -7,7 +7,7 @@ import core.HttpDriver;
 import net.sf.json.JSONObject;
 import utils.Checker;
 import utils.Common;
-
+//ºúÃÏÁ«
 public class SubmitTest {
 	String submit_url="/fgadmin/orders/submit";
 	@Test(description="submit")

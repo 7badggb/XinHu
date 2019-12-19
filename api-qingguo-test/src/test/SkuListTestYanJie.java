@@ -11,7 +11,7 @@ import utils.Common;
 import core.HttpDriver;
 import net.sf.json.JSONObject;
 import utils.Checker;
-
+//яж╫Ю
 public class SkuListTestYanJie {
 	String skuList_url="/common/skulist";
 	String skulistByid_url="/common/skulistbyid";

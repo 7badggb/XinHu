@@ -10,7 +10,7 @@ import utils.ReadPro;
 
 import core.ApiListener;
 import net.sf.json.JSONObject;
-@Listeners(ApiListener.class)
+//ÂÞÓÀËØ
 public class LoginTest {
 	String login_url="/common/fgadmin/login";
 	@Test(description="µÇÂ¼³É¹¦")
